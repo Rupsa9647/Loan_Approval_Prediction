@@ -1,0 +1,10 @@
+artifact_location: file:///D:/Loan_Approval_Prediction/mlruns/0/models/m-08b2a90665e74cc9bd5bae7d9f441eca/artifacts
+creation_timestamp: 1757051503535
+experiment_id: '0'
+last_updated_timestamp: 1757051510673
+model_id: m-08b2a90665e74cc9bd5bae7d9f441eca
+model_type: null
+name: model
+source_run_id: fa92e5734a5a4e79920df0d6c6eff286
+status: 2
+status_message: null

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --success: #2ecc71;
+            --danger: #e74c3c;
+            --light: #ecf0f1;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .result-card {
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            max-width: 550px;
+        }
+        
+        .card-header {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+        
+        .card-body {
+            padding: 2.5rem;
+        }
+        
+        .icon-container {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 2.5rem;
+        }
+        
+        .approved-icon {
+            background-color: rgba(46, 204, 113, 0.2);
+            color: var(--success);
+        }
+        
+        .rejected-icon {
+            background-color: rgba(231, 76, 60, 0.2);
+            color: var(--danger);
+        }
+        
+        .approved {
+            color: var(--success);
+            font-weight: 700;
+            font-size: 1.8rem;
+        }
+        
+        .rejected {
+            color: var(--danger);
+            font-weight: 700;
+            font-size: 1.8rem;
+        }
+        
+        .result-message {
+            font-size: 1.1rem;
+            color: #6c757d;
+            margin-bottom: 2rem;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            border: none;
+            padding: 12px 30px;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+        
+        .details-box {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="result-card">
+                    <div class="card-header">
+                        <h3 class="mb-0"><i class="bi bi-clipboard-check me-2"></i>Loan Prediction Result</h3>
+                    </div>
+                    <div class="card-body text-center">
+                        {% if "Approved" in prediction %}
+                        <div class="icon-container approved-icon">
+                            <i class="bi bi-check-circle-fill"></i>
+                        </div>
+                        <h2 class="approved">Loan Approved!</h2>
+                        <p class="result-message">Congratulations! Your loan application has a high chance of approval based on our assessment.</p>
+                        {% else %}
+                        <div class="icon-container rejected-icon">
+                            <i class="bi bi-x-circle-fill"></i>
+                        </div>
+                        <h2 class="rejected">Loan Not Approved</h2>
+                        <p class="result-message">We're sorry, but based on the information provided, your loan application is unlikely to be approved at this time.</p>
+                        {% endif %}
+                        
+                        <div class="details-box text-start">
+                            <h5 class="mb-3"><i class="bi bi-info-circle me-2"></i>What's Next?</h5>
+                            {% if "Approved" in prediction %}
+                            <p class="mb-0">Our prediction indicates your loan application meets the necessary criteria. The next step would be to complete the formal application process with your chosen financial institution.</p>
+                            {% else %}
+                            <p class="mb-0">You may want to consider improving your credit score, reducing existing debts, or applying for a smaller loan amount. Feel free to try again with different parameters.</p>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="mt-4">
+                            <a href="/" class="btn btn-primary">
+                                <i class="bi bi-house me-2"></i>Back to Home
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

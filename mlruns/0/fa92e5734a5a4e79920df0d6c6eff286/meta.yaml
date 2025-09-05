@@ -1,0 +1,14 @@
+artifact_uri: file:///D:/Loan_Approval_Prediction/mlruns/0/fa92e5734a5a4e79920df0d6c6eff286/artifacts
+end_time: 1757051510688
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: fa92e5734a5a4e79920df0d6c6eff286
+run_name: popular-conch-612
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1757051503384
+status: 3
+tags: []
+user_id: pc

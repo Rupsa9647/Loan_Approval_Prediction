@@ -1,0 +1,44 @@
+# Data manipulation and analysis
+pandas  
+
+# Experiment tracking and model management
+mlflow
+
+# Interactive environment for running code (Jupyter Notebook)
+notebook  
+
+# Numerical computing, arrays, and mathematical operations
+numpy  
+
+# Machine learning library (classification, regression, clustering, etc.)
+scikit-learn  
+
+# Data visualization (plots, graphs, charts)
+matplotlib  
+
+# Dictionary-like object with dot notation (e.g., config.box instead of config['box'])
+python-box
+
+# Reading and writing YAML configuration files
+pyYAML  
+
+# Progress bar utility for loops (e.g., tqdm(range(100)))
+tqdm  
+
+# For enforcing runtime type checking and contracts in Python code
+#ensure
+typeguard
+# Saving and loading models efficiently (used with scikit-learn, etc.)
+joblib  
+
+# Typing support for PyYAML (helps with type hints and IDE autocomplete)
+types-PyYAML  
+
+# Web framework to build APIs (for model deployment)
+Flask  
+
+# Handling Cross-Origin Resource Sharing (CORS) in Flask APIs
+Flask-Cors  
+
+# Install the current project in editable mode (so changes in source code reflect immediately)
+-e .  
