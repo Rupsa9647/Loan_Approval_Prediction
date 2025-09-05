@@ -1,16 +1,17 @@
-numpy==1.26.4
+
+
 
 # Data manipulation and analysis
 pandas  
 
 # Experiment tracking and model management
-mlflow
+mlflow==2.2.2
 
 # Interactive environment for running code (Jupyter Notebook)
 notebook  
 
 # Numerical computing, arrays, and mathematical operations
-#numpy==1.26.4
+numpy
 
 
 # Machine learning library (classification, regression, clustering, etc.)
@@ -20,7 +21,7 @@ scikit-learn
 matplotlib  
 
 # Dictionary-like object with dot notation (e.g., config.box instead of config['box'])
-python-box
+python-box==6.0.2
 
 # Reading and writing YAML configuration files
 pyYAML  
@@ -29,8 +30,8 @@ pyYAML
 tqdm  
 
 # For enforcing runtime type checking and contracts in Python code
-#ensure
-typeguard
+ensure==1.0.2
+#typeguard
 # Saving and loading models efficiently (used with scikit-learn, etc.)
 joblib  
 
