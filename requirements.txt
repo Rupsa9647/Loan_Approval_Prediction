@@ -8,7 +8,8 @@ mlflow
 notebook  
 
 # Numerical computing, arrays, and mathematical operations
-numpy  
+numpy==1.26.4
+
 
 # Machine learning library (classification, regression, clustering, etc.)
 scikit-learn  
