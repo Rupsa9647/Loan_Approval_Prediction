@@ -2,7 +2,6 @@ import pandas as pd
 from urllib.parse import urlparse
 import mlflow
 import mlflow.sklearn
-import numpy as np
 import joblib
 from pathlib import Path
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score
